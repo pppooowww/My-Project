@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+</head>
+<body>
+    <main>
+        <label>
+            <select>
+                <option>시군구명</option>
+            </select>
+            <select>
+                <option>배달가능여부</option>
+            </select>
+            <button type="button">조회</button>
+        </label>
+        <br>
+        <table border="1">
+            <thead>
+            <tr>
+                <th>순번</th>
+                <th>프랜차이즈명</th>
+                <th>가맹점명</th>
+                <th>전화번호</th>
+                <th>도로명주소</th>
+                <th>평일 운영 시간</th>
+                <th>토요일 운영 시간</th>
+                <th>배달가능여부</th>
+                <th>좋아요하기</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="">
+                <td>1</td>
+                <td>프랜차이즈명</td>
+                <td>가맹점명</td>
+                <td>전화번호</td>
+                <td>도로명주소</td>
+                <td>평일 운영 시간</td>
+                <td>토요일 운영 시간</td>
+                <td>배달가능여부</td>
+                <td><a href="#">좋아요하기</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
