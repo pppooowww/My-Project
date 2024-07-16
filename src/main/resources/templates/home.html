@@ -32,16 +32,16 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="">
-                <td>1</td>
-                <td>프랜차이즈명</td>
-                <td>가맹점명</td>
-                <td>전화번호</td>
-                <td>도로명주소</td>
-                <td>평일 운영 시간</td>
-                <td>토요일 운영 시간</td>
-                <td>배달가능여부</td>
-                <td><a href="#">좋아요하기</a></td>
+            <tr th:each="data, stat: ${dataList}">
+                <td th:text="${stat.count}">1</td>
+                <td th:text="${data.프랜차이즈명}">프랜차이즈명</td>
+                <td class="storeName" th:text="${data.가맹점명}">가맹점명</td>
+                <td th:text="${data.전화번호}">전화번호</td>
+                <td th:text="${data.소재지도로명주소}">도로명주소</td>
+                <td th:text="${data.평일운영시작시각}">평일 운영 시간</td>
+                <td th:text="${data.토요일운영시작시각}">토요일 운영 시간</td>
+                <td th:text="${data.배달가능여부}">배달가능여부</td>
+                <td><a href="#" id="likeBtn">좋아요</a><input type="hidden" value="0" id="likeCount"></td>
             </tr>
             </tbody>
         </table>
